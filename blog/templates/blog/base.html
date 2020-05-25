@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/blog.css'%}">
+  </head>
+  <body>
+    <nav class="techfont custom-navbar">
+      <div class="container" >
+        <ul class="nav navbar-nav colors" >
+            <li><a href="{% url 'post_list' %}" class="navbar-brand bigbrand" ><p>Kurumban</p></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'about' %}" class="navbar-brand">About</a></li>
+          <li><a href="https://github.com/lvignesh">Github</a></li>
+          <li><a href="https://linkedin.com">Linkedin</a></li>
+          {% if user.is_authenticated %}
+            <li>
+              <a href="{% url 'post_view' %}">NewPost</a>
+            </li>
+            <li>
+              <a href="{% url 'post_draft_list' %}">Drafts</a>
+            </li>
+            <li>
+              <a href="{% url 'logout' %}">Logout</a>
+            </li>
+            <li>
+              <a>Welcome:{{user.username}}</a>
+            </li>
+            {% else %}
+            <li><a href="{% url 'login' %}" class="nav navbar-right"><span class="glyphicon glyphicon-user"></span></a></li>
+          {% endif %}
+      </div>
+    </nav>
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="blog_posts">
+            {% block content %}
+            {% endblock %}
+  </body>
+</html>

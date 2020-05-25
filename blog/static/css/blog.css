@@ -1,0 +1,98 @@
+body{
+  background-color: #24242a;
+}
+
+nav a{
+  color:white;
+}
+.custom-navbar{
+background-color: #24242a;
+border-color: #24242a;
+color:#ff073a;
+}
+.techfont{
+  font-family: 'Balsamiq',sans-serif;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+.techfont p{
+  font-size: 1.5em;
+}
+.bigbrand {
+  font-size: 1.5em;
+}
+.centerstage{
+  margin:auto;
+}
+
+.postdate{
+  text-align: center;
+}
+.posttitle{
+  font-family: 'Balsamiq',sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+.postcontent{
+  font-family: 'Source';
+  font-size: 1.5em;
+}
+
+.post{
+  width: 100%;
+  height:100%;
+  background-color: #2e2e35;
+  margin-top: 5%;
+  padding-bottom: 10%;
+  padding-left: 4%;
+  padding-top: 3%;
+  border-radius: 15px;
+}
+
+.post h1 a{
+  color: white;
+  font-size: 2em;
+  font-family: 'source sans pro',sans-serif;
+}
+
+.post a{
+  color: #888;
+}
+.post p{
+  color: #888;
+}
+.post-detail{
+  color: #888;
+}
+
+.buttona{
+background-color: #d54857;
+border-color: #d54857;
+}
+.post-form{
+  color: #007bff;
+
+}
+.post-form input{
+  background-color: transparent;
+  border: solid 2px rgba(110, 110, 122, 0.5);
+  display:inline;
+
+}
+.post-form textarea{
+  background-color: transparent;
+  border: solid 2px rgba(110, 110, 122, 0.5);
+}
+.post-form select{
+  background-color: transparent;
+  border: solid 2px rgba(110, 110, 122, 0.5);
+}
+
+
+.post-for{
+  color:#ff073a;
+}
+
+.about{
+  color:white;
+}
